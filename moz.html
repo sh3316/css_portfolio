@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MozArt</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* 컨테이너 및 반응형 스타일 */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .back-button {
+      position: absolute;
+      top: 50px; /* 이미지 프레임과의 충분한 여백 */
+      left: 15%; /* 약간 오른쪽으로 조정 */
+      transform: translateX(-50%);
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+      z-index: 1000; /* 슬라이더 위에 표시되도록 */
+    }
+
+    .slider-container {
+      position: relative;
+      max-width: 500px;
+      margin: 4rem auto 0; /* 이미지 프레임 위에 여유로운 상단 여백 추가 */
+    }
+
+    .project-image {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: none;
+    }
+
+    .project-image.active {
+      display: block;
+    }
+
+    .slider-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 0.5rem;
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
+
+    .slider-button.left {
+      left: 10px;
+    }
+
+    .slider-button.right {
+      right: 10px;
+    }
+
+    .project-description {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #555;
+      margin-top: 1rem;
+    }
+
+    .project-description h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+
+    .subheading {
+      font-weight: bold;
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- 뒤로 가기 버튼 -->
+  <button class="back-button" onclick="history.back()">← Back</button>
+
+  <!-- 슬라이더 컨테이너 -->
+  <div class="slider-container">
+    <!-- 이미지 슬라이드 -->
+    <img src="./assets1/moz_main.jpg" alt="Project 3 Image" class="project-image">
+    <img src="./assets1/MOZ2.png" alt="Project 1 Image" class="project-image active">
+    <img src="./assets1/moz3.png" alt="Project 2 Image" class="project-image">
+    <img src="./assets1/moz4.png" alt="Project 3 Image" class="project-image">
+    <img src="./assets1/moz5.png" alt="Project 3 Image" class="project-image">
+    <img src="./assets1/moz6.png" alt="Project 3 Image" class="project-image">
+
+    <!-- 슬라이더 버튼 -->
+    <button class="slider-button right" onclick="nextImage()">❯</button>
+  </div>
+
+  <!-- 프로젝트 설명 -->
+  <div class="project-description">
+    <h2>Project: MozArt Machine – Marker Sketch to Music Translation    </h2>
+    <p>
+      Designed and implemented a system that converts marker sketches into melodies played on a glockenspiel. Marker sketches are drawn on card machine receipt-style paper strips, which are fed into the MozArt machine using stepper-driven rollers. A camera module captures sequential snapshots of the strip, stitching them into a complete image. Both the stepper motor and camera are controlled by a Raspberry Pi 3, which regulates motor speed and camera shutter timing.
+      <br/><br/>The algorithm for translating sketches into music operates in four key steps:<br/><br/>
+      1. Calibration: A threshold value is calculated by analyzing a blank section of paper, identifying the minimum pixel brightness to detect marker lines accurately.
+      <br/> 2. Image Processing: At each time step, a snapshot is cropped to its central column and converted to a binary image based on the threshold, with darker pixels representing lines.<br/>
+      3. Music Mapping: The processed image is scaled to an 8x1 Boolean vector, where each value corresponds to one of the eight glockenspiel notes to be played.<br/>
+      4. Melody Optimization: Adjacent notes are removed to ensure a harmonious melody, leveraging the D Major scale for a pleasant, though simple, musical output.<br/>
+      This innovative project bridges image processing and music generation, transforming visual sketches into engaging auditory experiences.
+    </p>
+     <p class="subheading">Topics:  Image Processing, Embedded Systems, Music Generation, Algorithm Design, Raspberry Pi Applications
+
+
+
+
+
+
+    </p>
+  </div>
+</div>
+
+<script>
+  // 이미지 슬라이드 인덱스 초기화
+  let currentImageIndex = 0;
+  const images = document.querySelectorAll('.project-image');
+
+  // 다음 이미지로 이동
+  function nextImage() {
+    images[currentImageIndex].classList.remove('active');
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    images[currentImageIndex].classList.add('active');
+  }
+
+  // 이전 이미지로 이동
+  function prevImage() {
+    images[currentImageIndex].classList.remove('active');
+    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+    images[currentImageIndex].classList.add('active');
+  }
+</script>
+
+</body>
+</html>

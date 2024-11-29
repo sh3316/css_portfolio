@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robotics AI</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* 컨테이너 및 반응형 스타일 */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .back-button {
+      position: absolute;
+      top: 50px; /* 이미지 프레임과의 충분한 여백 */
+      left: 15%; /* 약간 오른쪽으로 조정 */
+      transform: translateX(-50%);
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+      z-index: 1000; /* 슬라이더 위에 표시되도록 */
+    }
+
+    .slider-container {
+      position: relative;
+      max-width: 500px;
+      margin: 4rem auto 0; /* 이미지 프레임 위에 여유로운 상단 여백 추가 */
+    }
+
+    .project-image {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: none;
+    }
+
+    .project-image.active {
+      display: block;
+    }
+
+    .slider-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 0.5rem;
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
+
+    .slider-button.left {
+      left: 10px;
+    }
+
+    .slider-button.right {
+      right: 10px;
+    }
+
+    .project-description {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #555;
+      margin-top: 1rem;
+    }
+
+    .project-description h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+
+    .subheading {
+      font-weight: bold;
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- 뒤로 가기 버튼 -->
+  <button class="back-button" onclick="history.back()">← Back</button>
+
+  <!-- 슬라이더 컨테이너 -->
+  <div class="slider-container">
+    <!-- 이미지 슬라이드 -->
+
+    <video class="project-image active" controls>
+      <source src="./assets1/shape.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <img src="./assets1/shape_main.png" alt="Project Image" class="project-image">
+    <button class="slider-button left" onclick="prevImage()">❮</button>
+    <button class="slider-button right" onclick="nextImage()">❯</button>
+
+
+  </div>
+
+  <!-- 프로젝트 설명 -->
+<!-- 프로젝트 설명 -->
+  <div class="project-description">
+    <h2>Project: SHAPE – Automated Manufacturing of Patient-Specific Fracture Plates</h2>
+    <p>
+      The SHAPE project aims to revolutionize fracture treatment by integrating <b>additive manufacturing (AM)</b>, <b>computer modeling</b>, and <b>programming technologies</b>. Current treatments rely on mass-produced flat plates, which often cause stress localization and poor healing due to their lack of anatomical compatibility. SHAPE addresses these limitations by creating <b>semi-helical, patient-specific plates</b> that conform precisely to the curvature of individual bones.
+    </p>
+    <p>
+      Using Python, CT scans are converted into accurate <b>3D CAD models</b>, which are then processed into personalized plate designs. The helical geometry distributes stress more evenly, reducing complications such as malunion and refractures. This innovative approach eliminates the need for manual plate bending during surgery, saving time and minimizing risks of surgical site infections (SSI).
+    </p>
+    <p>
+      The project also explored the optimal configuration of screw placement and insertion angles. Based on research, a default screw angle of <b>perpendicular to the bone surface</b> was implemented to reduce stress, while adjustments allow for variations based on fracture location. The final design uses <b>five screws</b> to balance structural stability and infection prevention. The resulting plates demonstrated superior mechanical properties during simulation tests, with stress concentrations well below critical thresholds.
+    </p>
+    <p>
+      Despite the higher cost and longer production time compared to conventional plates, SHAPE presents a compelling case for improving recovery rates and surgical efficiency. Advances in <b>automation and additive manufacturing</b> are expected to lower costs, making this innovative approach increasingly viable in clinical settings.
+    </p>
+    <p class="subheading">
+      Topics: Additive Manufacturing, Biomechanical Engineering, Computational Modeling, Custom Medical Devices, Surgical Optimization
+    </p>
+  </div>
+
+</div>
+
+<script>
+  // 이미지 슬라이드 인덱스 초기화
+  let currentImageIndex = 0;
+  const images = document.querySelectorAll('.project-image');
+
+  // 다음 이미지로 이동
+  function nextImage() {
+    images[currentImageIndex].classList.remove('active');
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    images[currentImageIndex].classList.add('active');
+  }
+
+  // 이전 이미지로 이동
+  function prevImage() {
+    images[currentImageIndex].classList.remove('active');
+    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+    images[currentImageIndex].classList.add('active');
+  }
+</script>
+
+</body>
+</html>

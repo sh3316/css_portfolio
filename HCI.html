@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Human Computer Interaction</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* 컨테이너 및 반응형 스타일 */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .back-button {
+      margin-bottom: 1rem;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .project-entry {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      margin-bottom: 5rem;
+    }
+
+    .project-image {
+      width: 45%;
+      max-width: 350px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-description {
+      width: 55%;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .project-description h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+
+    .subheading {
+      font-weight: bold;
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      color: #666;
+    }
+    .highlight-green {
+      color: green;
+      font-weight: bold;
+    }
+    .highlight-red {
+      color: red;
+      font-weight: bold;
+    }
+        .highlight-yellow {
+      color: yellow;
+      font-weight: bold;
+    }
+
+    .highlight-lightblue {
+      color: lightblue;
+      font-weight: bold;
+    }
+    .highlight-blue {
+      color: blue;
+      font-weight: bold;
+    }
+
+    .highlight-purple {
+      color: purple;
+      font-weight: bold;
+    }
+    @media (max-width: 600px) {
+      .project-entry {
+        flex-direction: column;
+        text-align: center;
+      }
+      .project-image, .project-description {
+        width: 100%;
+      }
+      .project-description h2 {
+        font-size: 1.3rem;
+      }
+      .project-description {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- 뒤로 가기 버튼 -->
+    <button class="back-button" onclick="history.back()">← Back</button>
+
+    <!-- 프로젝트 1 -->
+         <!-- 프로젝트 2 -->
+    <div class="project-entry">
+      <img src="./assets1/NLP_Bayes.jpg" alt="Project 1 Image" class="project-image">
+      <div class="project-description">
+        <h2>Project 1:  NLP Text Classification with Sentiment and Topic Analysis</h2>
+        <p>Developed a multi-faceted NLP classification pipeline to categorize text data into sentiment and topic-based labels using diverse machine learning models. This project implemented Naive Bayes, Logistic Regression, and Multinomial Regression for text classification, aimed at understanding model performance across binary and multiclass classification tasks. The project utilized IMDb movie reviews for binary sentiment analysis and AG News data for topic classification, focusing on optimizing preprocessing techniques such as stemming and stopword removal to improve model accuracy. Custom functions for text vectorization and data cleaning were created to ensure high-quality inputs for the models, with dropout layers introduced to enhance model generalization. The project highlights the efficiency and accuracy of different classifiers in handling sentiment and topic analysis in NLP, with applications in recommendation systems and content filtering.
+
+
+
+        </p>
+        <p class="subheading">Topics: Text Classification, Sentiment Analysis, Topic Modeling</p>
+      </div>
+    </div>
+    <!-- 프로젝트 3 -->
+    <div class="project-entry">
+      <img src="./assets1/NLP_RNN.jpg" alt="Project 2 Image" class="project-image">
+      <div class="project-description">
+        <h2>Project 2: NLP Sequence Preprocessing and Vocabulary Creation</h2>
+        <p>This project focused on building the groundwork for sequence processing in NLP, emphasizing vocabulary construction and text normalization. Key functionalities included converting text to ASCII, tokenizing, and normalizing sequences to a consistent format. A custom vocabulary class was implemented to manage word-to-index mappings, frequency counts, and padding tokens to prepare for sequence modeling tasks. This project is essential for handling diverse text inputs and enabling accurate, standardized vocabulary representations for machine learning models.
+
+        </p>
+        <p class="subheading">Topics:Vocabulary Management, Sequence Normalization, Text Processing      </p>
+      </div>
+    </div>
+
+    <div class="project-entry">
+      <img src="./assets1/NLP_attention.png" alt="Project 3 Image" class="project-image">
+      <div class="project-description">
+        <h2>Project 3: NLP Sequence-to-Sequence Translation Model with Attention</h2>
+        <p>
+          Developed an NLP sequence-to-sequence translation model with attention mechanisms for translating input sequences. This project involved creating a vocabulary management class and functions for text normalization, including Unicode normalization and filtering. The model was designed to process and translate sequences efficiently, incorporating PyTorch neural network modules and utilizing dropout layers to improve generalization. Key components included preprocessing steps like tokenization, vocabulary indexing, and padding to optimize input sequences for training. This project highlights the foundational elements of translation models and sequence preprocessing.
+
+
+
+        </p>
+                <p class="subheading">Topics: Sequence-to-Sequence Modeling, Attention Mechanisms, Text Normalization</p>
+      </div>
+    </div>
+
+
+
+    <!-- 프로젝트 4 -->
+    <div class="project-entry">
+      <img src="./assets1/NLP_WordVec.png" alt="Project 4 Image" class="project-image">
+      <div class="project-description">
+        <h2>Project 4: Text Embedding and Neural Network Classification 
+        </h2>
+        <p>Developed a neural network text classification model leveraging pre-trained GloVe embeddings for enriched semantic representation of words. The project involved loading and preprocessing datasets using the datasets library and implementing tokenization functions. Key components included integrating GloVe embeddings to initialize model layers, enhancing the model's capacity to understand and classify textual data based on semantic similarity. Additionally, the project applied PyTorch's neural network modules, focusing on efficient data handling and GPU acceleration for faster training. This setup enables effective classification tasks in NLP, such as sentiment and topic analysis.
+
+
+        </p>
+        <p class="subheading">Topics: Text Embeddings, GloVe, Neural Network Classification, Tokenization</p>
+      </div>
+    </div>
+
+    <!-- 프로젝트 5 -->
+    <div class="project-entry">
+      <img src="./assets1/NLP_KVM.jpg" alt="Project 4 Image" class="project-image">
+      <div class="project-description">
+        <h2>Project 5: Key-Value Memory Network (KVMNet) for NLP Classification
+        </h2>
+        <p>This project centers on implementing a Key-Value Memory Network (KVMNet) for NLP classification tasks. Utilizing text preprocessing techniques like Unicode normalization, stemming, and stopword removal, the pipeline refines text inputs for efficient retrieval in memory networks. The project integrates embeddings to represent input data within key-value memory structures, allowing the model to retrieve information contextually based on query keys. Designed in PyTorch, this model applies KVMN techniques for tasks such as semantic retrieval and classification, optimized for GPU compatibility to handle complex, memory-intensive operations efficiently.
+
+
+        </p>
+        <p class="subheading">Topics: Key-Value Memory Networks, NLP Classification, Semantic Retrieval</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

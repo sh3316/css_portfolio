@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SHAPE</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* 컨테이너 및 반응형 스타일 */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    /* Back Button 스타일 */
+    .back-button {
+      position: absolute;
+      top: 20px; /* 이미지 프레임과 충분한 간격 */
+      left: 20px; /* 항상 화면 안에 보이도록 고정 */
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+      z-index: 1000; /* 다른 요소 위에 표시 */
+    }
+
+    .back-button:hover {
+      background-color: #555;
+    }
+
+    /* 메인 이미지 및 기타 미디어 스타일 */
+    .main-image, .sub-image, .video-image {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 3rem; /* 상단 여백 추가 */
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .sub-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 1.5rem 0 1rem;
+      color: #555;
+    }
+
+    .text-content {
+      margin-bottom: 2rem;
+      color: #444;
+    }
+
+    .media-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .video-image, .media-image {
+      flex: 1 1 calc(50% - 1rem); /* 두 개를 한 줄에 배치 */
+      max-width: calc(50% - 1rem);
+      height: auto;
+    }
+
+    @media (max-width: 600px) {
+      .back-button {
+        top: 10px; /* 작은 화면에서도 간격 유지 */
+        left: 10px; /* 항상 보이도록 왼쪽 고정 */
+      }
+
+      .main-image, .sub-image, .video-image, .media-image {
+        width: 100%;
+      }
+
+      .media-group {
+        flex-direction: column;
+      }
+
+      .sub-title {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Back Button -->
+  <button class="back-button" onclick="history.back()">← Back</button>
+
+  <!-- 메인 이미지 -->
+  <img src="./assets1/shape_main.png" alt="Main Image" class="main-image">
+
+
+  <div class="text-content">
+    <p>
+      <br/>The SHAPE project addresses the challenges inherent in conventional fracture treatment methods, which rely on mass-produced flat plates that often fail to provide an optimal fit to the patient’s unique bone structure. These limitations result in stress localization, poor bone healing, and complications such as malunion and infection. Additionally, the manual bending of plates during surgery increases operative time and introduces variability, further impacting recovery outcomes.
+
+      Advances in additive manufacturing (AM), computational modeling, and medical imaging provide a transformative opportunity to develop patient-specific solutions. By integrating these technologies, SHAPE introduces semi-helical plates designed to conform precisely to a patient’s bone anatomy. This innovative approach aims to improve medical performance, reduce surgical time, and enhance recovery rates, setting a new standard in personalized fracture treatment. The project reflects a commitment to addressing critical gaps in orthopedic care through technological innovation and multidisciplinary collaboration.
+
+
+
+
+    </p>
+  </div>
+
+  <!-- 서브타이틀 -->
+  <h2 class="sub-title">Motivation</h2>
+
+  <!-- 서브이미지 및 글 -->
+  <img src="./assets1/shape_motivation.png" alt="Sub Image 2" class="sub-image">
+
+  <div class="text-content">
+    <p>
+      The SHAPE project was motivated by the pressing need to address the limitations of conventional fracture treatment methods, particularly the use of mass-produced flat metal plates. These plates, while widely utilized, often fail to provide an optimal fit to the patient’s unique bone structure, leading to stress concentration, poor healing outcomes, and complications such as malunion or infection. Additionally, the manual bending of plates during surgery increases operative time and introduces variability that can negatively affect patient recovery.
+
+
+      <br/>Advances in additive manufacturing (AM), medical imaging, and computational modeling present an opportunity to revolutionize fracture treatment by enabling the creation of patient-specific solutions. By integrating these technologies, SHAPE seeks to provide a more effective and personalized approach to bone repair, improving recovery rates and reducing surgical risks. This project reflects the commitment to leveraging emerging technologies to address longstanding challenges in orthopedic medicine, enhancing both clinical performance and patient outcomes.
+
+
+
+
+
+
+
+    </p>
+  </div>
+
+
+  <h2 class="sub-title">Validation</h2>
+  <img src="./assets1/shape_validation.png" alt="Sub Image 2" class="sub-image">
+  <div class="text-content">
+    <p>
+      The SHAPE project’s validation focused on assessing the feasibility and performance of its core components: patient-specific design, semi-helical geometry, and additive manufacturing techniques. Key validations included computational simulations, material feasibility studies, and expert feedback.
+
+      <br/> The semi-helical design was validated using finite element analysis (FEA) simulations in Fusion360, which demonstrated that the plates effectively reduced stress localization and provided the mechanical strength required for long bone fractures. The accuracy of patient-specific modeling was confirmed by converting CT scans into precise CAD models, ensuring the plates conformed closely to bone anatomy.
+
+
+      <br/>Expert consultations with orthopedic surgeons and medical professionals provided critical insights into the practical challenges of conventional treatments, reinforcing the advantages of SHAPE’s customized approach. While physical prototypes and clinical trials were not conducted due to time and resource constraints, the project lays a strong foundation for further testing and real-world application. The results underscore the potential of SHAPE to improve surgical efficiency, reduce complications, and enhance patient recovery.
+
+
+
+
+
+
+
+    </p>
+  </div>
+  <h2 class="sub-title">Results</h2>
+
+  <div class="media-group">
+    <!-- 첫 번째 비디오 -->
+    <iframe 
+    class="video-image" 
+    src="https://www.youtube.com/embed/pK3brJYVPrM" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+
+    
+    <!-- 두 번째 이미지 -->
+    <img src="./assets1/shape_results.png" alt="Robot Visualization" class="media-image">
+  </div>
+  
+  <!-- 마지막 글 -->
+  <div class="text-content">
+    <p>
+      The SHAPE project successfully demonstrated the feasibility of creating patient-specific, semi-helical fracture plates through computational modeling and additive manufacturing. Using anonymized CT scans, the project developed CAD models of custom plates that precisely conformed to bone anatomy. Finite element analysis (FEA) simulations validated the mechanical performance of the plates, showing reduced stress localization and enhanced structural stability compared to conventional flat plates.
+
+
+      <br/> The semi-helical design was optimized to allow for better load distribution and improved bone regeneration. Additionally, the use of fewer screws without compromising stability was highlighted as a key advantage, potentially reducing the risk of complications such as infection and malunion. While physical prototyping and clinical trials were not conducted due to time and resource limitations, the computational and design results provide a strong foundation for future development and testing of SHAPE as a transformative solution for fracture treatment.
+
+
+
+
+
+
+    </p>
+  </div>
+  
+  
+</div>
+
+</body>
+</html>

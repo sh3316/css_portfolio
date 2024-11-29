@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robotics AI</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* 컨테이너 및 반응형 스타일 */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .back-button {
+      margin-bottom: 1rem;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .project-entry {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      margin-bottom: 5rem;
+    }
+
+    .project-image {
+      width: 45%;
+      max-width: 350px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-description {
+      width: 55%;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .project-description h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+
+    .subheading {
+      font-weight: bold;
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      color: #666;
+    }
+    .highlight-green {
+      color: green;
+      font-weight: bold;
+    }
+    .highlight-red {
+      color: red;
+      font-weight: bold;
+    }
+        .highlight-yellow {
+      color: yellow;
+      font-weight: bold;
+    }
+
+    .highlight-lightblue {
+      color: lightblue;
+      font-weight: bold;
+    }
+    .highlight-blue {
+      color: blue;
+      font-weight: bold;
+    }
+
+    .highlight-purple {
+      color: purple;
+      font-weight: bold;
+    }
+    @media (max-width: 600px) {
+      .project-entry {
+        flex-direction: column;
+        text-align: center;
+      }
+      .project-image, .project-description {
+        width: 100%;
+      }
+      .project-description h2 {
+        font-size: 1.3rem;
+      }
+      .project-description {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- 뒤로 가기 버튼 -->
+    <button class="back-button" onclick="history.back()">← Back</button>
+
+    <!-- 프로젝트 1 -->
+    <div class="project-entry">
+      <img src="./assets1/Rait_meteor.gif" alt="Project 1 Image" class="project-image">
+      <div class="project-description">
+        <h2>Project 1: Kalman Filter Prediction and Laser Defense System for Meteorites</h2>
+        <p>
+          Designed a system to predict and intercept falling meteorites using Kalman Filters in a noisy observation environment. The assignment required precise estimations of meteorite trajectories despite position noise, limited computational resources, and strict timing constraints to predict and intercept within milliseconds. Complex restrictions, such as maintaining a high accuracy threshold across consecutive timesteps and optimizing angle adjustments within limited aiming ranges, added to the challenge. The laser turret's defense mechanism calculated optimal firing angles and accurately targeted meteorites to prevent ground impact.
+
+        </p>
+                <p class="subheading">Topics: Kalman Filters, State Estimation, Noise Reduction, Robotic Defense Systems</p>
+      </div>
+    </div>
+
+    <!-- 프로젝트 2 -->
+    <div class="project-entry">
+      <img src="./assets1/Rait_Particle.gif" alt="Project 2 Image" class="project-image">
+      <div class="project-description">
+        <h2>Project 2: Particle Filter-Based Satellite Localization and Targeted Signal Transmission</h2>
+        <p>Developed a particle filter system to accurately estimate the satellite’s position within a noisy, simulated solar system. The project required implementing core particle filter techniques, including initialization, importance weighting, resampling, and fuzzing, to handle the complexities of gravitational noise and limited observational data. Each particle’s weight is calculated using Gaussian probability based on gravitational measurements, ensuring a robust estimate. A custom resampling wheel retains the most probable particles, while a fuzzing algorithm prevents premature convergence by spreading particles over a broader area. In the second phase, the satellite's position estimate is used to dynamically compute an optimal SOS transmission angle to the home planet, improving rescue signal targeting under strict resource constraints. The <span class="highlight-red">Red Dot</span> is the target, <span class="highlight-green"> Green Dots </span> are the peripheral objects, </span> <span class="highlight-lightblue"> Light Blue and White Particles</span> are estimates of the code. </p>
+        <p class="subheading">Topics: Particle Filter, Resampling Wheel, Gaussian Weighting, Fuzzing, Probabilistic Localization, Signal Angle Calculation</p>
+      </div>
+    </div>
+
+    <!-- 프로젝트 3 -->
+    <div class="project-entry">
+      <img src="./assets1/RAIT_SLAM.gif" alt="Project 3 Image" class="project-image">
+      <div class="project-description">
+        <h2>Project 3:SLAM and Path Planning for Indiana Drones</h2>
+        <p>Developed a Simultaneous Localization and Mapping (SLAM) system and a path-planning algorithm for a drone navigating a jungle environment with unknown obstacles. The SLAM component estimates the positions of the drone and trees based on noisy sensor measurements, while the path-planning component guides the drone towards a treasure, avoiding obstacles. Implemented robust matrix operations, Cholesky decomposition, and probabilistic algorithms to optimize localization and navigation accuracy. The project required efficient handling of sensor noise and real-time updates to the drone’s belief state. <span class="highlight-red"> Red Path</span> is intended path and <span class="highlight-blue"> Blue Path</span> is actual path that drone moved. The small gray dots are objects' estimated center through detection. </p>
+        <p class="subheading">Topics: SLAM, Path Planning, Matrix Operations, Bayesian Inference, Sensor Fusion</p>
+      </div>
+    </div>
+
+    <!-- 프로젝트 4 -->
+    <div class="project-entry">
+      <img src="./assets1/RAIT_Search.gif" alt="Project 4 Image" class="project-image">
+      <div class="project-description">
+        <h2>Project 4: Warehouse Robot Navigation and Delivery Optimization</h2>
+        <p>Implemented algorithms to enable a robot to navigate through a grid-based warehouse environment to retrieve boxes and deliver them to a drop zone. The robot follows specific paths using A* search for efficient navigation, considering movement costs and constraints. The code adapts to various configurations in Parts A, B, and C, each with increasing levels of complexity. Movement penalties for illegal paths and stochastic actions were also integrated, ensuring the robot optimally completes tasks under realistic conditions.
+
+        </p>
+        <p class="subheading">Topics: A* Search, Priority Queue Management, Heuristic Pathfinding, Dynamic Programming</p>
+      </div>
+    </div>
+
+    <!-- 프로젝트 5 -->
+    
+  </div>
+
+</body>
+</html>

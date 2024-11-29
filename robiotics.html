@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ro-Biotics</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* 컨테이너 및 반응형 스타일 */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    /* Back Button 스타일 */
+    .back-button {
+      position: absolute;
+      top: 20px; /* 이미지 프레임과 충분한 간격 */
+      left: 20px; /* 항상 화면 안에 보이도록 고정 */
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+      z-index: 1000; /* 다른 요소 위에 표시 */
+    }
+
+    .back-button:hover {
+      background-color: #555;
+    }
+
+    /* 메인 이미지 및 기타 미디어 스타일 */
+    .main-image, .sub-image, .video-image {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 3rem; /* 상단 여백 추가 */
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .sub-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 1.5rem 0 1rem;
+      color: #555;
+    }
+
+    .text-content {
+      margin-bottom: 2rem;
+      color: #444;
+    }
+
+    .media-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .video-image, .media-image {
+      flex: 1 1 calc(50% - 1rem); /* 두 개를 한 줄에 배치 */
+      max-width: calc(50% - 1rem);
+      height: auto;
+    }
+
+    @media (max-width: 600px) {
+      .back-button {
+        top: 10px; /* 작은 화면에서도 간격 유지 */
+        left: 10px; /* 항상 보이도록 왼쪽 고정 */
+      }
+
+      .main-image, .sub-image, .video-image, .media-image {
+        width: 100%;
+      }
+
+      .media-group {
+        flex-direction: column;
+      }
+
+      .sub-title {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Back Button -->
+  <button class="back-button" onclick="history.back()">← Back</button>
+
+  <!-- 메인 이미지 -->
+  <img src="./assets1/robiotics_main.png" alt="Main Image" class="main-image">
+
+
+  <div class="text-content">
+    <p>
+      <br/>Ro-Biotics tackles the global challenge of antibiotic resistance by developing untethered micro-robots made from 4D-printed smart biomaterials. These biodegradable and bio-compatible materials physically destroy resistant bacteria, offering a safer, sustainable alternative to antibiotics. The project combines advanced materials science, robotics, and healthcare innovation, paving the way for personalized medicine and next-generation treatments by 2050.
+
+
+
+
+
+
+
+    </p>
+  </div>
+
+  <!-- 서브타이틀 -->
+  <h2 class="sub-title">Motivation</h2>
+
+  <!-- 서브이미지 및 글 -->
+  <img src="./assets1/robo1.png" alt="Sub Image 2" class="sub-image">
+  <img src="./assets1/robo2.png" alt="Sub Image 2" class="sub-image">
+
+  <div class="text-content">
+    <p>
+      The design of Ro-Biotics was driven by the urgent need to combat antibiotic resistance, one of the most pressing global health challenges. Traditional antibiotics, reliant on chemical methods, are increasingly ineffective against resistant bacteria. This project sought to leverage smart biomaterials and robotics to develop a revolutionary solution that physically destroys bacteria, reducing the likelihood of resistance.
+
+      <br/>Inspired by the principles of bio-compatibility, biodegradability, and minimal environmental impact, the design process followed a human-centered approach. The focus was on creating a seamless integration of 4D-printed materials with peptide polymers to form untethered, self-actuating micro-robots. These robots are designed to operate safely within the body without triggering immune responses, ensuring both effectiveness and user trust. The project was guided by a commitment to future-ready healthcare solutions, balancing technological innovation with practical scalability and sustainability.
+
+    </p>
+  </div>
+
+  <!-- 서브타이틀 -->
+  <h2 class="sub-title">Concept Development & Trend Analysis</h2>
+  <img src="./assets1/robo3.png" alt="Sub Image 2" class="sub-image">
+  <img src="./assets1/robo4.png" alt="Sub Image 2" class="sub-image">
+
+  <div class="text-content">
+    <p>
+      Ro-Biotics addresses antibiotic resistance through untethered micro-robots made from 4D-printed smart biomaterials and antimicrobial peptide polymers. These materials physically destroy bacteria, reducing resistance risks while ensuring safety and biodegradability.
+
+      The project explored advanced materials like SNAPPs and guanidinium-functionalized polycarbonates for their ability to target multi-drug-resistant bacteria without harming human cells. Using 4D printing, the robots gain shape-changing properties for responsive bacterial eradication.
+      
+      Prototypes validated key components, integrating material science and micro-scale manufacturing into a scalable system. Ro-Biotics envisions a future of personalized medicine, where tailored solutions can be manufactured on demand.
+
+
+    </p>
+  </div>
+  <h2 class="sub-title">Validation</h2>
+  <img src="./assets1/robo5.png" alt="Sub Image 2" class="sub-image">
+  <div class="text-content">
+    <p>
+      The validation process focused on demonstrating the feasibility of Ro-Biotics' core technologies and materials. Antimicrobial materials such as SNAPPs and guanidinium-functionalized polycarbonates were validated through research studies showing their effectiveness against multi-drug-resistant bacteria without harming human cells. SNAPPs, for instance, proved capable of eliminating bacterial infections in mice with no observed resistance after 600 generations.
+
+      Prototypes highlighted the integration potential of 4D printing, smart biomaterials, and micro-scale additive manufacturing. These prototypes demonstrated shape-changing capabilities, material resilience, and manufacturing precision at the required scale. Expert feedback from biochemists, biomedical researchers, and healthcare professionals confirmed the scientific and practical validity of the concept while identifying scalability and regulatory challenges for future development.
+    </p>
+  </div>
+  <h2 class="sub-title">Final Prototypes</h2>
+
+  <div class="media-group">
+    <!-- 첫 번째 비디오 -->
+    <video class="video-image" controls>
+      <source src="./assets1/robo6.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    
+    <!-- 두 번째 이미지 -->
+    <img src="./assets1/robo7.jpg" alt="Robot Visualization" class="media-image">
+  </div>
+  
+  <!-- 마지막 글 -->
+  <div class="text-content">
+    <p>
+      The final prototypes showcased the key technological elements of Ro-Biotics, demonstrating the feasibility of combining smart biomaterials and advanced manufacturing techniques:
+    </p>
+    <ul>
+      <li>
+        <strong>4D-Printed Shape-Changing Model</strong>: A prototype created using 4D printing demonstrated shape transformation in response to temperature changes, simulating the ability of the material to adapt dynamically for targeted bacterial eradication.
+      </li>
+      <li>
+        <strong>Nano-Printed Prototype</strong>: Using precision nano-scale additive manufacturing, this prototype illustrated the potential for creating micro-robots capable of operating at scales necessary to combat bacteria without clogging blood vessels or triggering immune responses.
+      </li>
+    </ul>
+    <p>
+      These prototypes validated the integration of innovative materials and manufacturing technologies, paving the way for future applications in personalized medicine and advanced drug delivery systems.
+    </p>
+  </div>
+  
+  <h2 class="sub-title">Closing</h2>
+  <img src="./assets1/robo_last.PNG" alt="Sub Image 2" class="sub-image">
+  <div class="text-content">
+    <p>
+      Awards: Global Grad Show 2019, Imperial College Dyson School Innovation Awards 
+      <br/>CNN News Article: https://edition.cnn.com/style/article/global-grad-show-health/index.html
+      <br/>Global Grad Show Link: https://www.prototypesforhumanity.com/project/ro-biotics/
+    </p>
+  </div>
+</div>
+
+</body>
+</html>

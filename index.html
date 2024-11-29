@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seunghui Huh Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Seunghui Huh</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Seunghui Huh</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets1/profile-pic.png" alt="Seunghui Huh profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Greetings! I'm </p>
+        <h1 class="title">Seunghui Huh</h1>
+        <p class="section__text__p2">Engineer, Designer, and Computer Scientist</p>
+        <p class="section__text__p3">– or a combination of all</p> <!-- 추가된 부분 -->
+
+        <div class="btn-container">
+            <button
+              class="btn btn-color-2"
+              onclick="location.href='mailto:shuh@sookmyung.ac.kr'"
+              >
+              Request CV
+            </button>
+            <button class="btn btn-color-1" onclick="location.href='./#contact'">
+              Contact Info
+            </button>
+            <!-- <img
+              src="./assets1/linkedin.png"
+              alt="My LinkedIn profile"
+              class="icon"
+              onclick="location.href='https://www.linkedin.com/in/seunghui-huh-68795a16b/'"
+            /> -->
+          </div>
+      </div>
+    </section>
+    <section id="about">
+
+      <h1 class="title">A Glimpse Into My Journey</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets1/about-pic.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets1/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Current Role</h3>
+              <p><strong>Collaborate Professor</strong><br /><strong>Sookmyung Women's University</strong><br />
+                Curriculum Development & Lecturer and Metaverse Deployment <br/>(Lecture Evaluation 4.9/5.0, cumulative ≤2500 students)<br/> <br />
+                <a href="https://sw.sookmyung.ac.kr/main/?skin=basic02.html" target="_blank"style="color: #007AFF; text-decoration: underline;">논리적사고와 소프트웨어</a> & <a href="https://www.youtube.com/watch?v=D8TDg4cAYFI" target="_blank" style="color: #007AFF; text-decoration: underline;">Metaverse Introduction</a> 
+                <br /> <br />Leading instillation of Extracurricular programs including: AI, AWS Clouds, ROS, React and International Initiatives </p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets1/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>
+                <strong>Dyson School of Design Engineering</strong><br />
+                BEng, Imperial College London, UK<br />
+                MEng, Imperial College London, UK<br /><br />
+                <strong>Computer Science</strong><br />
+                MS, Georgia Institute of Technology, US <br />
+                Specialization in Interactive Intelligence
+              </p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+                I am a designer and engineer with a strong focus on creating human centered designs, specializing in creating innovative physical-digital systems. My work bridges the gap between software and tangible interfaces, leveraging AI and open-source technologies to develop interactive tools for education and research.            </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="projects">
+      <p class="section__text__p1">My Portfolio Highlights</p>
+      <h1 class="title">CS Projects</h1>
+      <div class="project-grid">
+    
+        <!-- Project 1 -->
+        <div class="project-item">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets1/AI.png" alt="Project 1" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">AI</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='AI.html'">View Details</button>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Project 2 -->
+        <div class="project-item">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets1/RAIT.jpg" alt="Project 2" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Robotics AI</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='RAIT.html'">View Details</button>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Project 3 -->
+        <div class="project-item">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets1/CP.jpg" alt="Project 3" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Computational Photography</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='CP.html'">View Details</button>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Project 4 -->
+        <div class="project-item">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets1/NLP.jpg" alt="Project 4" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">NLP</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='NLP.html'">View Details</button>
+            </div>
+          </div>
+        </div>
+    
+
+    
+        <!-- Project 6 -->
+        <div class="project-item">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets1/tetris.gif" alt="Project 6" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Tetris Algorithm</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='tetris.html'">View Details</button>
+            </div>
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets1/balance.gif" alt="Design Project 3" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Self-stabilizing Robot</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='balance.html'">View Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-grid-title">
+          <h2 class="design-title">Design Projects</h2>
+        </div>
+    
+        <div class="project-item">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets1/robiotics_main.png" alt="Design Project 1" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Ro-biotics (Award Winning Project)</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='robiotics.html'">View Details</button>
+            </div>
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets1/atto_main.jpeg" alt="Design Project 1" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Pobo</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='atto.html'">View Details</button>
+            </div>
+          </div>
+        </div>
+        <!-- Project 5 -->
+        <div class="project-item">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets1/spry_main.png" alt="Design Project 1" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">SPRY</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='spry.html'">View Details</button>
+            </div>
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets1/shape_main.png" alt="Project 5" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">3D Printed Fracture Plates</h2>
+            <div class="btn-container">
+
+              <button class="btn btn-color-2 project-btn" onclick="location.href='shape1.html'">View Details</button>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Design Project 3 -->
+        <div class="project-item">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets1/MOZ1.png" alt="Design Project 3" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">MozArt</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='moz.html'">View Details</button>
+            </div>
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets1/FEA Main.png" alt="Design Project 3" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">FEA: Chassis Design </h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='FEA.html'">View Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Skills</h1>
+      <div class="experience-details-container">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Stacks</h2>
+          <div class="article-container">
+            <article>
+              <img
+                src="./assets1/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Python</h3>
+                <p>Advanced</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets1/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Image Processing</h3>
+                <p>Advanced</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets1/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Robotics</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets1/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>NLP</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets1/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Unity & C#</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets1/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>3D Printing</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets1/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Prototyping</h3>
+                <p>Advanced</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets1/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>CAD</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets1/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>RaspberryPi</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets1/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Arduino</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets1/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>MATLAB</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets1/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>FEA</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+      
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets1/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:examplemail@gmail.com">shuh@sookmyung.ac.kr</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets1/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/seunghui-huh-68795a16b/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 SeungHui Huh. All Rights Reserved. Last updated: Nov 2024</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

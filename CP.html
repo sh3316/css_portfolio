@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computational Photography</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* 컨테이너 및 반응형 스타일 */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .back-button {
+      margin-bottom: 1rem;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .project-entry {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      margin-bottom: 5rem;
+    }
+
+    .project-image {
+      width: 45%;
+      max-width: 350px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-description {
+      width: 55%;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .project-description h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+
+    .subheading {
+      font-weight: bold;
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      color: #666;
+    }
+    .highlight-green {
+      color: green;
+      font-weight: bold;
+    }
+    .highlight-red {
+      color: red;
+      font-weight: bold;
+    }
+        .highlight-yellow {
+      color: yellow;
+      font-weight: bold;
+    }
+
+    .highlight-lightblue {
+      color: lightblue;
+      font-weight: bold;
+    }
+    .highlight-blue {
+      color: blue;
+      font-weight: bold;
+    }
+
+    .highlight-purple {
+      color: purple;
+      font-weight: bold;
+    }
+    @media (max-width: 600px) {
+      .project-entry {
+        flex-direction: column;
+        text-align: center;
+      }
+      .project-image, .project-description {
+        width: 100%;
+      }
+      .project-description h2 {
+        font-size: 1.3rem;
+      }
+      .project-description {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- 뒤로 가기 버튼 -->
+    <button class="back-button" onclick="history.back()">← Back</button>
+
+    <!-- 프로젝트 1 -->
+         <!-- 프로젝트 2 -->
+    <div class="project-entry">
+      <img src="./assets1/CP_object_removal.gif" alt="Project 1 Image" class="project-image">
+      <div class="project-description">
+        <h2>Project 1: Object Removal Using Patch Matching and Confidence Propagation</h2>
+        <p>Implemented an advanced inpainting algorithm to remove objects seamlessly from images by utilizing patch matching and confidence propagation. The process begins by identifying the target area and examining surrounding textures and patterns. Using an iterative patch selection technique, the algorithm finds and fills gaps with patches that blend naturally, preserving structural details like edges and gradients along object boundaries. Confidence propagation is applied to ensure the filled area aligns smoothly with surrounding pixels, producing a highly realistic inpainting effect. This approach is especially suited for high-quality image restoration and object removal in visual applications.
+
+        </p>
+        <p class="subheading">Topics: Patch Matching, Confidence Propagation, Boundary Detection, Image Restoration</p>
+      </div>
+    </div>
+    <!-- 프로젝트 3 -->
+    <div class="project-entry">
+      <img src="./assets1/CP_SeamCarving.gif" alt="Project 2 Image" class="project-image">
+      <div class="project-description">
+        <h2>Project 2: Seam Carving for Content-Aware Image Resizing</h2>
+        <p>Developed a comprehensive image resizing and object removal solution using seam carving. This project involved implementing an energy-based method for adaptively resizing images while preserving key content areas. The algorithm calculates energy maps and removes or inserts seams—paths of least importance—based on dynamic programming techniques. Object removal is also supported, with a specified mask guiding the elimination of unwanted regions by iteratively removing seams, ensuring minimal distortion in surrounding areas. The system is optimized for both performance and quality, making it ideal for responsive image resizing in UI/UX design and photography.        </p>
+        <p class="subheading">Topics: Seam Carving, Energy Map Calculation, Dynamic Programming, Content-Aware Scaling        </p>
+      </div>
+    </div>
+
+    <div class="project-entry">
+      <img src="./assets1/CP_Masking.gif" alt="Project 3 Image" class="project-image">
+      <div class="project-description">
+        <h2>Project 3: Multi-Resolution Pyramid Blending for Image Mosaics</h2>
+        <p>
+          Implemented an image blending algorithm using Gaussian and Laplacian pyramids to create seamless transitions between images. This project involved constructing Gaussian and Laplacian pyramids, blending images with a Gaussian mask at multiple resolutions, and collapsing the pyramids to form a single blended output. Key tasks included custom implementations for image reduction, expansion, and convolution <span class=" highlight-red">without</span> OpenCV’s built-in pyramid functions. The work demonstrates advanced techniques in image processing, with practical applications in image mosaics and photo manipulation.
+
+
+        </p>
+                <p class="subheading">Topics: Image Processing, Gaussian and Laplacian Pyramids, Convolution, Blending</p>
+      </div>
+    </div>
+
+
+
+    <!-- 프로젝트 4 -->
+    <div class="project-entry">
+      <img src="./assets1/CP_HDR.gif" alt="Project 4 Image" class="project-image">
+      <div class="project-description">
+        <h2>Project 4: HDR Image Processing and Radiance Mapping
+        </h2>
+        <p>Created an HDR imaging pipeline that generates high dynamic range (HDR) images from multiple exposure photos, based on the Debevec and Malik method. The project focused on simulating real-world lighting by computing radiance maps, tone mapping, and histogram equalization for a balanced output. To achieve this, I implemented key functions such as intensity sampling, response curve computation, radiance map generation, and histogram equalization without relying on built-in functions. The final result enhances detail in both shadows and highlights, offering visually rich, realistic images ideal for professional photography and visual effects.
+        </p>
+        <p class="subheading">Topics: HDR Imaging, Radiance Mapping, Exposure Fusion, Histogram Equalization</p>
+      </div>
+    </div>
+
+    <!-- 프로젝트 5 -->
+    
+  </div>
+
+</body>
+</html>

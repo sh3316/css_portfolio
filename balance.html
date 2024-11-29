@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Self Balancing Robot</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* 컨테이너 및 반응형 스타일 */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .back-button {
+      position: absolute;
+      top: 50px; /* 이미지 프레임과의 충분한 여백 */
+      left: 15%; /* 약간 오른쪽으로 조정 */
+      transform: translateX(-50%);
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+      z-index: 1000; /* 슬라이더 위에 표시되도록 */
+    }
+
+    .slider-container {
+      position: relative;
+      max-width: 500px;
+      margin: 4rem auto 0; /* 이미지 프레임 위에 여유로운 상단 여백 추가 */
+    }
+
+    .project-image {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: none;
+    }
+
+    .project-image.active {
+      display: block;
+    }
+
+    .slider-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 0.5rem;
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
+
+    .slider-button.left {
+      left: 10px;
+    }
+
+    .slider-button.right {
+      right: 10px;
+    }
+
+    .project-description {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #555;
+      margin-top: 1rem;
+    }
+
+    .project-description h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+
+    .subheading {
+      font-weight: bold;
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- 뒤로 가기 버튼 -->
+  <button class="back-button" onclick="history.back()">← Back</button>
+
+  <!-- 슬라이더 컨테이너 -->
+  <div class="slider-container">
+    <!-- 이미지 슬라이드 -->
+    <img src="./assets1/balance.gif" alt="Project 1 Image" class="project-image">
+    <img src="./assets1/balance1.png" alt="Project 1 Image" class="project-image active">
+    <img src="./assets1/balance2.png" alt="Project 1 Image" class="project-image">
+    <img src="./assets1/balance3.png" alt="Project 1 Image" class="project-image">
+    <img src="./assets1/balance4.png" alt="Project 1 Image" class="project-image">
+    <img src="./assets1/balance5.png" alt="Project 1 Image" class="project-image">
+
+    <!-- 슬라이더 버튼 -->
+    <button class="slider-button right" onclick="nextImage()">❯</button>
+  </div>
+
+  <!-- 프로젝트 설명 -->
+  <div class="project-description">
+    <h2>Project: MozArt Machine – Marker Sketch to Music Translation    </h2>
+    <p>
+      Developed a Segway robot capable of balancing and ‘dancing’ to music, utilizing signal processing and electrical systems. Implemented on a PyBoard running Python scripts, the system included inputs such as a gyroscope and microphone, and outputs like DC motors and a small OLED screen. This project emphasized the integration of PID control and beat detection to achieve dynamic movement.
+      <br/>Balancing was controlled through a Proportional-Integral-Derivative (PID) algorithm, which adjusted motor speeds to counteract tipping based on proportional, integral, and derivative error calculations. To enhance stability, gyroscope and accelerometer data were processed through a complementary filter, reducing individual sensor inaccuracies. Musical beat detection was achieved by analyzing energy levels in real time, using an Interrupt Service Routine (ISR) to modify the Segway’s target pitch angle whenever significant energy peaks were identified. By shifting the target angle, the Segway moved rhythmically in response to the detected beats, effectively ‘dancing.’
+      <br/> The algorithm further analyzed parameters such as energy intensity and frequency content to create a variety of synchronized movements. This innovative approach combined technical precision with creative functionality, showcasing expertise in robotics, control systems, and signal processing.
+
+
+
+    </p>
+     <p class="subheading">Topics:  PID Control, Signal Processing, Embedded Systems, Robotics, Python Programming
+
+
+
+
+
+
+    </p>
+  </div>
+</div>
+
+<script>
+  // 이미지 슬라이드 인덱스 초기화
+  let currentImageIndex = 0;
+  const images = document.querySelectorAll('.project-image');
+
+  // 다음 이미지로 이동
+  function nextImage() {
+    images[currentImageIndex].classList.remove('active');
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    images[currentImageIndex].classList.add('active');
+  }
+
+  // 이전 이미지로 이동
+  function prevImage() {
+    images[currentImageIndex].classList.remove('active');
+    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+    images[currentImageIndex].classList.add('active');
+  }
+</script>
+
+</body>
+</html>

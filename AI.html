@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artificial Intelligence</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* 컨테이너 및 반응형 스타일 */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .back-button {
+      margin-bottom: 1rem;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .project-entry {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      margin-bottom: 5rem;
+    }
+
+    .project-image {
+      width: 45%;
+      max-width: 350px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-description {
+      width: 55%;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .project-description h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+
+    .subheading {
+      font-weight: bold;
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      color: #666;
+    }
+    .highlight-green {
+      color: green;
+      font-weight: bold;
+    }
+    .highlight-red {
+      color: red;
+      font-weight: bold;
+    }
+
+
+
+    @media (max-width: 600px) {
+      .project-entry {
+        flex-direction: column;
+        text-align: center;
+      }
+      .project-image, .project-description {
+        width: 100%;
+      }
+      .project-description h2 {
+        font-size: 1.3rem;
+      }
+      .project-description {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- 뒤로 가기 버튼 -->
+    <button class="back-button" onclick="history.back()">← Back</button>
+
+    <!-- 프로젝트 1 -->
+    <div class="project-entry">
+      <img src="./assets1/AI_game.gif" alt="Project 1 Image" class="project-image">
+      <div class="project-description">
+        <h2>Project 1: Custom Evaluation Function for Isolation Game</h2>
+        <p>
+          Developed an evaluation function tailored for an Isolation game environment. This function calculates scores based on available moves for each player, aiming to enhance AI decision-making by prioritizing positions with greater strategic value. The <span class="highlight-green">green piece</span> represents the <span class="highlight-green">human player</span>, while the <span class="highlight-red">red piece</span> is the <span class="highlight-red">AI agent</span>. Implemented in Python, this project required optimizing decision points to improve gameplay strategies.
+        </p>
+                <p class="subheading">Topics: Game Theory, Alpha-Beta Pruning, Iterative Deepening Algorithm</p>
+      </div>
+    </div>
+
+    <!-- 프로젝트 2 -->
+    <div class="project-entry">
+      <img src="./assets1/AI_gaussian.gif" alt="Project 2 Image" class="project-image">
+      <div class="project-description">
+        <h2>Project 2: Gaussian Mixture Model for Image Segmentation</h2>
+        <p>Utilized Gaussian Mixture Models to perform unsupervised image segmentation, enhancing pixel clustering and component likelihood calculations. This involved refining initial parameters using k-means and creating a convergence function to optimize the segmentation accuracy, resulting in a segmented output that represents distinct image components based on intensity.</p>
+        <p class="subheading">Topics: Gaussian Mixture Models, k-means, Convergence Functions</p>
+      </div>
+    </div>
+
+    <!-- 프로젝트 3 -->
+    <div class="project-entry">
+      <img src="./assets1/AI_Bsearch.png" alt="Project 3 Image" class="project-image">
+      <div class="project-description">
+        <h2>Project 3: Bidirectional Pathfinding Algorithm</h2>
+        <p>Engineered a pathfinding algorithm capable of efficiently finding paths in graph structures by implementing bidirectional search techniques. This project incorporated the calculation of cumulative costs and optimal path intersections between nodes, enhancing the speed and accuracy of navigation within complex graph environments by leveraging a* search combined with bidirectional search.</p>
+        <p class="subheading">Topics: Graph Theory, Bidirectional Search, Pathfinding</p>
+      </div>
+    </div>
+
+    <!-- 프로젝트 4 -->
+    <div class="project-entry">
+      <img src="./assets1/AI_RFDT.png" alt="Project 4 Image" class="project-image">
+      <div class="project-description">
+        <h2>Project 4: Decision Tree and Random Forest Implementation</h2>
+        <p>Developed a custom Decision Tree and Random Forest model, along with a set of evaluation metrics including precision, recall, accuracy, and confusion matrix computation. This project emphasized creating efficient data processing functions with vectorized numpy operations to handle large datasets. Additionally, I built functions for Gini impurity and gain calculations, essential for decision tree splits, and implemented a k-fold cross-validation mechanism to evaluate model performance across multiple folds.</p>
+        <p class="subheading">Topics: Machine Learning, Decision Trees, Random Forests, Numpy Vectorization, Evaluation Metrics</p>
+      </div>
+    </div>
+
+    <!-- 프로젝트 5 -->
+    <div class="project-entry">
+      <img src="./assets1/AI_Bayesian.png" alt="Project 5 Image" class="project-image">
+      <div class="project-description">
+        <h2>Project 5: Bayesian Network for Security System and Game Network Simulation</h2>
+        <p>Designed a Bayesian Network to model a security system with conditional probability distributions for key components and interactions. The project also implemented Gibbs and Metropolis-Hastings sampling methods for inference on a game network to compare convergence and efficiency. By creating functions for sampling, calculating posterior distributions, and setting up custom conditional probability tables, this project demonstrates advanced skills in probabilistic graphical models and Bayesian inference using the pgmpy library.
+
+        </p>
+        <p class="subheading">Topics: Bayesian Networks, Gibbs Sampling, Metropolis-Hastings Algorithm, Conditional Probability Distributions</p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

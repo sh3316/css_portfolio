@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finite Element Analysis</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* 컨테이너 및 반응형 스타일 */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .back-button {
+      position: absolute;
+      top: 50px; /* 이미지 프레임과의 충분한 여백 */
+      left: 15%; /* 약간 오른쪽으로 조정 */
+      transform: translateX(-50%);
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+      z-index: 1000; /* 슬라이더 위에 표시되도록 */
+    }
+
+    .slider-container {
+      position: relative;
+      max-width: 500px;
+      margin: 4rem auto 0; /* 이미지 프레임 위에 여유로운 상단 여백 추가 */
+    }
+
+    .project-image {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: none;
+    }
+
+    .project-image.active {
+      display: block;
+    }
+
+    .slider-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 0.5rem;
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
+
+    .slider-button.left {
+      left: 10px;
+    }
+
+    .slider-button.right {
+      right: 10px;
+    }
+
+    .project-description {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #555;
+      margin-top: 1rem;
+    }
+
+    .project-description h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+
+    .subheading {
+      font-weight: bold;
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- 뒤로 가기 버튼 -->
+  <button class="back-button" onclick="history.back()">← Back</button>
+
+  <!-- 슬라이더 컨테이너 -->
+  <div class="slider-container">
+    <!-- 이미지 슬라이드 -->
+    <img src="./assets1/FEA1.png" alt="Project 1 Image" class="project-image">
+    <img src="./assets1/FEA2.png" alt="Project 1 Image" class="project-image active">
+    <img src="./assets1/FEA3.png" alt="Project 1 Image" class="project-image">
+    <img src="./assets1/FEA4.png" alt="Project 1 Image" class="project-image">
+    <img src="./assets1/FEA5.png" alt="Project 1 Image" class="project-image">
+
+    <!-- 슬라이더 버튼 -->
+    <button class="slider-button right" onclick="nextImage()">❯</button>
+  </div>
+
+  <!-- 프로젝트 설명 -->
+  <div class="project-description">
+    <h2>Project: FEA-Based Chassis Design for the PAL-V Flying Car  </h2>
+    <p>
+      This project supported a second-year module on Finite Element Analysis (FEA) by integrating FEA into the design of a chassis for the PAL-V flying car. The design process aimed to meet specific requirements, including a fundamental frequency above 50 Hz, the ability to support static landing forces, and durability to withstand 10 years of cyclic moments caused by the rotation of the vehicle’s blades.
+
+     <br/> I developed and analyzed multiple design iterations, alongside my team, to identify the most promising design. The selected chassis underwent detailed FEA, focusing on mesh refinement and convergence in high-stress regions. This process highlighted the importance of addressing stress concentrations in complex or angular geometries, which could lead to localized failures. Sanity checks and close inspection of the FEA outputs revealed occasional exaggerations caused by issues like high aspect ratio elements, emphasizing the need for careful evaluation of simulation results.
+
+      <br/>Simulation outputs demonstrated the chassis's performance under static landing loads and cyclic moments about various axes. Alternative designs, while often more complex, frequently exhibited worse performance due to stress concentrations near abrupt geometric changes. This project showcased the application of FEA in optimizing structural designs to meet rigorous performance and durability criteria.
+
+    </p>
+     <p class="subheading">Topics: Finite Element Analysis, Structural Design, Stress Concentration, Mesh Refinement, Dynamic Loads, Cyclic Loading
+
+
+
+
+
+
+    </p>
+  </div>
+</div>
+
+<script>
+  // 이미지 슬라이드 인덱스 초기화
+  let currentImageIndex = 0;
+  const images = document.querySelectorAll('.project-image');
+
+  // 다음 이미지로 이동
+  function nextImage() {
+    images[currentImageIndex].classList.remove('active');
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    images[currentImageIndex].classList.add('active');
+  }
+
+  // 이전 이미지로 이동
+  function prevImage() {
+    images[currentImageIndex].classList.remove('active');
+    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+    images[currentImageIndex].classList.add('active');
+  }
+</script>
+
+</body>
+</html>

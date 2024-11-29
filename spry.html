@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPRY</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* 컨테이너 및 반응형 스타일 */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    /* Back Button 스타일 */
+    .back-button {
+      position: absolute;
+      top: 20px; /* 이미지 프레임과 충분한 간격 */
+      left: 20px; /* 항상 화면 안에 보이도록 고정 */
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+      z-index: 1000; /* 다른 요소 위에 표시 */
+    }
+
+    .back-button:hover {
+      background-color: #555;
+    }
+
+    /* 메인 이미지 및 기타 미디어 스타일 */
+    .main-image, .sub-image, .video-image {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 3rem; /* 상단 여백 추가 */
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .sub-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 1.5rem 0 1rem;
+      color: #555;
+    }
+
+    .text-content {
+      margin-bottom: 2rem;
+      color: #444;
+    }
+
+    .media-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .video-image, .media-image {
+      flex: 1 1 calc(50% - 1rem); /* 두 개를 한 줄에 배치 */
+      max-width: calc(50% - 1rem);
+      height: auto;
+    }
+
+    @media (max-width: 600px) {
+      .back-button {
+        top: 10px; /* 작은 화면에서도 간격 유지 */
+        left: 10px; /* 항상 보이도록 왼쪽 고정 */
+      }
+
+      .main-image, .sub-image, .video-image, .media-image {
+        width: 100%;
+      }
+
+      .media-group {
+        flex-direction: column;
+      }
+
+      .sub-title {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Back Button -->
+  <button class="back-button" onclick="history.back()">← Back</button>
+
+  <!-- 메인 이미지 -->
+  <img src="./assets1/spry_main.png" alt="Main Image" class="main-image">
+
+  <!-- 서브이미지 및 글 -->
+  <img src="./assets1/sprylogo.png" alt="Sub Image 1" class="sub-image2">
+  <div class="text-content">
+    <p>
+      <br/>Spry was developed to enhance the cooking experience for individuals with weak grip strength, evolving from a garlic press to a versatile tool that encourages the mass market to experiment with spices and flavors in cooking. The design process adhered to a human-centered approach, driven by genuine user insights from extensive research, followed by iterative prototyping and testing.
+
+    </p>
+  </div>
+
+  <!-- 서브타이틀 -->
+  <h2 class="sub-title">User Testing</h2>
+
+  <!-- 서브이미지 및 글 -->
+  <img src="./assets1/spry2.png" alt="Sub Image 2" class="sub-image">
+  <div class="text-content">
+    <p>
+      The development of Spry was guided by extensive user research to deeply understand the needs of its target audience. Two online surveys gathered 64 responses to explore general cooking habits. Additionally, 28 phone interviews provided in-depth insights into how people use garlic and spices in their daily lives. In-person interviews at Morecambe Parish Church with eight elderly individuals suffering from reduced grip strength revealed key challenges in cooking. A detailed observational case study with Toni, an 83-year-old woman with significant strength and motion impairments, highlighted usability barriers and informed critical design decisions.
+
+
+    </p>
+  </div>
+
+  <!-- 서브타이틀 -->
+  <h2 class="sub-title">Design Approach</h2>
+  <img src="./assets1/spry3.png" alt="Sub Image 2" class="sub-image">
+  <div class="text-content">
+    <p>
+      Spry’s development followed a human-centered design process, emphasizing simplicity, durability, and usability. The product was engineered with a focus on minimizing parts and maximizing ingress protection, resulting in a seamless exterior with only one L-shaped pivot switch. This innovative pivot allowed dual operation: pressing on the top for worktop use and squeezing from the side for over-the-pan tasks. Flipping the pivot revealed the charging port, maintaining the device’s compact and intuitive design. Iterative prototyping and testing ensured the design met both functional and ergonomic requirements.
+
+
+
+    </p>
+  </div>
+  <h2 class="sub-title">Rapid Prototyping</h2>
+  <img src="./assets1/spry4.png" alt="Sub Image 2" class="sub-image">
+
+  <h2 class="sub-title">Final Product</h2>
+
+  <div class="media-group">
+    <!-- 첫 번째 비디오 -->
+    <video class="video-image" controls>
+      <source src="./assets1/spry_final.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  
+    <!-- 두 번째 비디오 -->
+    <video class="video-image" controls>
+      <source src="./assets1/spry_assembly.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <!-- 마지막 글 -->
+  <div class="text-content">
+    <p>
+      The final prototype of Spry was tested with Toni, who had been unable to crush or grate garlic and spices for over a decade due to reduced dexterity and vision. Her response of pleasant surprise validated Spry’s effectiveness, demonstrating its ability to restore lost capabilities and enhance independence. Spry combines thoughtful design, functionality, and inclusivity to offer a tool that not only meets the needs of individuals with grip impairments but also encourages everyone to experiment with flavors in their cooking.
+    </p>
+  </div>
+  <h2 class="sub-title">Design Blueprint</h2>
+  <img src="./assets1/spry_map.png" alt="Sub Image 2" class="sub-image">
+
+</div>
+
+</body>
+</html>

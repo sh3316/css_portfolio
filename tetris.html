@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robotics AI</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* 컨테이너 및 반응형 스타일 */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .back-button {
+      position: absolute;
+      top: 50px; /* 이미지 프레임과의 충분한 여백 */
+      left: 15%; /* 약간 오른쪽으로 조정 */
+      transform: translateX(-50%);
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+      z-index: 1000; /* 슬라이더 위에 표시되도록 */
+    }
+
+    .slider-container {
+      position: relative;
+      max-width: 500px;
+      margin: 4rem auto 0; /* 이미지 프레임 위에 여유로운 상단 여백 추가 */
+    }
+
+    .project-image {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: none;
+    }
+
+    .project-image.active {
+      display: block;
+    }
+
+    .slider-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 0.5rem;
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
+
+    .slider-button.left {
+      left: 10px;
+    }
+
+    .slider-button.right {
+      right: 10px;
+    }
+
+    .project-description {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #555;
+      margin-top: 1rem;
+    }
+
+    .project-description h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+
+    .subheading {
+      font-weight: bold;
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- 뒤로 가기 버튼 -->
+  <button class="back-button" onclick="history.back()">← Back</button>
+
+  <!-- 슬라이더 컨테이너 -->
+  <div class="slider-container">
+    <!-- 이미지 슬라이드 -->
+    <img src="./assets1/tetris.gif" alt="Project 3 Image" class="project-image">
+    <img src="./assets1/tetris1.png" alt="Project 1 Image" class="project-image active">
+    <img src="./assets1/tetris2.png" alt="Project 2 Image" class="project-image">
+    <img src="./assets1/tetris3.png" alt="Project 3 Image" class="project-image">
+
+    <!-- 슬라이더 버튼 -->
+    <button class="slider-button right" onclick="nextImage()">❯</button>
+  </div>
+
+  <!-- 프로젝트 설명 -->
+  <div class="project-description">
+    <h2>Project: Tiling Algorithms for Randomly Generated Surfaces    </h2>
+    <p>
+      Developed an advanced algorithm to tile randomly generated surfaces with Tetris pieces (tetrominoes), achieving approximately 90% accuracy and maintaining efficient runtimes.
+      The algorithm employed a greedy strategy, prioritizing tiles with the most free edges and dynamically updating free edge counts to guide the placement of pieces. This approach mimicked human problem-solving by starting with the outer areas or tiles with fewer neighbors, ensuring effective coverage. <br><br>
+      When multiple tetrominoes fit a location, the algorithm selected the piece maximizing edge coverage, reducing gaps in the solution. Further enhancements included detecting ‘tromino’ zones (three-square areas) and prioritizing their coverage with tetrominoes to minimize exposed tiles, mitigating common challenges of greedy methods. 
+      The solution efficiently handled target surfaces on grids of up to 1000 x 1000, demonstrating robust performance for various complex configurations.
+    </p>
+     <p class="subheading">Topics: Algorithm Design, Greedy Methods, Computational Geometry, Optimization Strategies, Problem Solving
+
+
+
+
+
+
+    </p>
+  </div>
+</div>
+
+<script>
+  // 이미지 슬라이드 인덱스 초기화
+  let currentImageIndex = 0;
+  const images = document.querySelectorAll('.project-image');
+
+  // 다음 이미지로 이동
+  function nextImage() {
+    images[currentImageIndex].classList.remove('active');
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    images[currentImageIndex].classList.add('active');
+  }
+
+  // 이전 이미지로 이동
+  function prevImage() {
+    images[currentImageIndex].classList.remove('active');
+    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+    images[currentImageIndex].classList.add('active');
+  }
+</script>
+
+</body>
+</html>

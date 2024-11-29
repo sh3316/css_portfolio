@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pobo</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* 컨테이너 및 반응형 스타일 */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    /* Back Button 스타일 */
+    .back-button {
+      position: absolute;
+      top: 20px; /* 이미지 프레임과 충분한 간격 */
+      left: 20px; /* 항상 화면 안에 보이도록 고정 */
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+      z-index: 1000; /* 다른 요소 위에 표시 */
+    }
+
+    .back-button:hover {
+      background-color: #555;
+    }
+
+    /* 메인 이미지 및 기타 미디어 스타일 */
+    .main-image, .sub-image, .video-image {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 3rem; /* 상단 여백 추가 */
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .sub-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 1.5rem 0 1rem;
+      color: #555;
+    }
+
+    .text-content {
+      margin-bottom: 2rem;
+      color: #444;
+    }
+
+    .media-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .video-image, .media-image {
+      flex: 1 1 calc(50% - 1rem); /* 두 개를 한 줄에 배치 */
+      max-width: calc(50% - 1rem);
+      height: auto;
+    }
+
+    @media (max-width: 600px) {
+      .back-button {
+        top: 10px; /* 작은 화면에서도 간격 유지 */
+        left: 10px; /* 항상 보이도록 왼쪽 고정 */
+      }
+
+      .main-image, .sub-image, .video-image, .media-image {
+        width: 100%;
+      }
+
+      .media-group {
+        flex-direction: column;
+      }
+
+      .sub-title {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Back Button -->
+  <button class="back-button" onclick="history.back()">← Back</button>
+
+  <!-- 메인 이미지 -->
+  <img src="./assets1/atto_main.jpeg" alt="Main Image" class="main-image">
+
+
+  <div class="text-content">
+    <p>
+      <br/>      Pobo is an innovative autonomous stroller designed to transform parental mobility. Developed by Trello Design Solutions, this groundbreaking concept combines automotive technology with childcare, allowing parents to walk or jog while an intelligent, self-navigating chassis follows behind, carrying their child in a safe and comfortable "Nest".
+
+      <br/>More than just a stroller, Pobo represents a user-centered approach to family transportation. With features like collision avoidance, emergency braking, and a smart user interface, the product aims to provide parents with a convenient, technologically advanced solution that reduces physical strain while offering unprecedented control and flexibility during family outings.
+
+
+
+
+
+    </p>
+  </div>
+
+  <!-- 서브타이틀 -->
+  <h2 class="sub-title">Motivation</h2>
+
+  <!-- 서브이미지 및 글 -->
+  <img src="./assets1/atto_persona.png" alt="Sub Image 2" class="sub-image">
+
+  <div class="text-content">
+    <p>
+      The motivation behind Pobo stems from recognizing the limitations of traditional strollers and the evolving needs of modern, active parents. Current pushchairs constrain user experience through physical exertion and the need to constantly manually control the vehicle, limiting parents' mobility and creating unnecessary strain during family outings.
+      <br/>By integrating autonomous vehicle technology into a stroller, Pobo aims to transform the parenting experience. The design addresses key user needs: reducing physical effort, providing a safe and comfortable environment for children, and enabling parents to maintain their active lifestyles while enjoying uninterrupted interaction and movement with their children.
+    </p>
+  </div>
+
+  <!-- 서브타이틀 -->
+  <h2 class="sub-title">Concept Development & Validation</h2>
+  <img src="./assets1/atto_modelling.png" alt="Sub Image 2" class="sub-image">
+  <img src="./assets1/atto_prototype_final.png" alt="Sub Image 2" class="sub-image">
+
+  <div class="text-content">
+    <p>
+      Pobo's development followed a rigorous, user-centered design approach that prioritized safety, comfort, and intuitive interaction. The team at Trello Design Solutions conducted extensive market research, studying top vendors of jogging pushchairs and identifying critical user needs through comprehensive stakeholder analysis. This process involved creating detailed user personas and a testing matrix that evaluated 80 specific customer requirements.
+
+      <br/> The development process was iterative, beginning with a rapid prototyping phase using cardboard and blue foam models. User testing in Hyde Park allowed the team to gather real-world feedback, leading to critical design refinements. Key iterations included developing a Bluetooth bracelet for user control, adjusting storage capacity, and designing multiple nest orientations to accommodate different child positions and comfort needs.
+      
+      <br/> Validation was achieved through multiple rounds of user testing and prototype development. The team created detailed CAD models using Rhino software, built physical prototypes using materials like plywood and polystyrene foam, and continuously refined the design based on user feedback. Critical design elements such as the nest's adjustable headrest, emergency braking mechanism, and intuitive user interface were all developed and validated through hands-on testing with target users in real-world scenarios.
+
+    </p>
+  </div>
+  
+  <h2 class="sub-title">Final Prototypes</h2>
+
+  <div class="media-group">
+    <!-- 첫 번째 비디오 -->
+    <video class="video-image" controls>
+      <source src="./assets1/atto_video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    
+    <!-- 두 번째 이미지 -->
+    <img src="./assets1/atto_final1.jpeg" alt="Robot Visualization" class="media-image">
+  </div>
+  <img src="./assets1/atto_app.png" alt="Sub Image 2" class="sub-image">
+
+  <!-- 마지막 글 -->
+  <div class="text-content">
+    <p>
+      The final Pobo prototype represented a culmination of extensive design iterations and user-driven refinements. Constructed primarily from plywood, blue polystyrene foam, and polyurethane foam cushions, the prototype comprised two main components: the Nest and the Chassis. The Nest featured a carefully designed seat with adjustable headrest, three-point seatbelt, and multiple positioning options, while the Chassis incorporated autonomous navigation capabilities, storage solutions, and safety features.
+      <br/>Key innovations in the final prototype included a pivoted platform for nest attachment, a rotating windshield, and a slim design optimized for urban mobility. The external storage was strategically designed to accommodate essential items, and the handle was crafted to provide comfortable interaction for users across different height percentiles. User testing validated the prototype's core functionalities, with participants describing the design as comfortable, intuitive, and aesthetically pleasing.
+    </p>
+  </div>
+  
+  
+</div>
+
+</body>
+</html>
