@@ -157,16 +157,16 @@ a:hover {
   min-height: fit-content;
 } */
 section {
-  padding-top: 4vh; /* 상단 패딩 */
-  padding-bottom: 4vh; /* 하단 패딩 */
-  margin: 0 10rem; /* 자동으로 수평 정렬 */
-  height: auto; /* 자동 높이 */
-  min-height: fit-content; /* 필요한 높이만 차지 */
+  padding-top: 4vh; 
+  padding-bottom: 4vh; 
+  margin: 0 10rem; 
+  height: auto; 
+  min-height: fit-content; 
 }
 
 .section-container {
   display: flex;
-  margin-bottom: 6vh; /* 섹션 사이 간격 설정 */
+  margin-bottom: 6vh; 
 
 }
 
@@ -228,7 +228,7 @@ section {
 
 .btn-container {
   display: flex;
-  text-align: center; /* 버튼 가운데 정렬 */
+  text-align: center; 
 
   justify-content: center;
   gap: 1rem;
@@ -394,14 +394,14 @@ article .icon {
 }
 
 .design-title {
-  font-size: 3rem; /* CS Projects와 동일한 폰트 크기 */
-  font-weight: 600; /* CS Projects와 동일한 폰트 굵기 */
+  font-size: 3rem; 
+  font-weight: 600;
   color: black;
 }
 
 .title {
-  font-size: 3rem; /* CS Projects의 폰트 크기와 동일하게 유지 */
-  font-weight: 600; /* 폰트 굵기 */
+  font-size: 3rem; 
+  font-weight: 600; 
   text-align: center;
 }
 
@@ -412,102 +412,102 @@ article .icon {
 */
 
 .section__text__p1 {
-  margin-bottom: 20px; /* 'Explore My' 아래 간격 추가 */
+  margin-bottom: 20px; 
 }
 
 .title {
-  margin-bottom: 40px; /* 'Experience' 제목 아래 간격 추가 */
+  margin-bottom: 40px;
 }
 
 .experience-details-container {
-  margin-top: 20px; /* Experience 섹션 컨테이너와 제목 사이 간격 추가 */
+  margin-top: 20px; 
 }
 
 .project-title {
-  font-size: 1.7rem; /* Adjusted font size */
-  text-align: center; /* Center the text */
-  word-wrap: break-word; /* Allow breaking long words */
+  font-size: 1.7rem; 
+  text-align: center; 
+  word-wrap: break-word; 
 }
 .project-img {
   border-radius: 2rem;
   width: 90%;
-  height: 200px; /* 고정된 높이 */
-  aspect-ratio: 4 / 3; /* 필요시 추가: 모든 이미지의 비율을 4:3으로 고정 */
+  height: 200px; 
+  aspect-ratio: 4 / 3; 
 
-  object-fit: cover; /* 이미지를 고정된 영역에 맞추기 */
+  object-fit: cover;
 }
 .project-images {
   display: flex;
-  flex-direction: column; /* Stacks the images vertically */
-  gap: 3rem; /* Adds space between the images */
+  flex-direction: column;
+  gap: 3rem; 
 }
 .container {
   margin: 0 auto;
-  padding: 20px; /* Add some padding around the container */
-  max-width: 800px; /* Limit the width for readability */
-  line-height: 1.6; /* Improve readability with consistent line spacing */
+  padding: 20px; 
+  max-width: 800px; 
+  line-height: 1.6; 
 }
 
 h2 {
   font-size: 1.8em;
-  margin-bottom: 20px; /* Add spacing below the title */
-  text-align: center; /* Center align the title */
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 p {
-  margin-bottom: 20px; /* Add spacing between paragraphs */
+  margin-bottom: 20px; 
 }
 
 ol {
-  margin-left: 20px; /* Indent the list */
-  margin-bottom: 20px; /* Add spacing below the list */
+  margin-left: 20px;
+  margin-bottom: 20px; 
 }
 
 ol li {
-  margin-bottom: 10px; /* Add spacing between list items */
+  margin-bottom: 10px;
 }
 
 .subheading {
   font-weight: bold;
-  margin-top: 30px; /* Add spacing above the topics section */
-  text-align: center; /* Center align the topics */
+  margin-top: 30px;
+  text-align: center; 
 }
 
 
 @media screen and (max-width: 1200px) {
   .project-item {
-    flex: 1 1 calc(50% - 20px); /* 중간 크기 화면에서 한 줄에 2개씩 배치 */
+    flex: 1 1 calc(50% - 20px);
   }
   .project-title {
-    font-size: 1.2rem; /* 모바일에서 폰트 크기를 줄임 */
+    font-size: 1.2rem; 
   }
   .title {
-    font-size: 2rem; /* 큰 타이틀의 폰트 크기를 줄임 */
+    font-size: 2rem;
   }
   .experience-sub-title, .project-description, .section__text__p2 {
-    font-size: 1rem; /* 다양한 텍스트 요소의 폰트 크기를 줄임 */
+    font-size: 1rem;
   }
   .nav-links {
-    font-size: 1.2rem; /* 네비게이션 폰트 크기 줄이기 */
+    font-size: 1.2rem;
   }
   .btn {
-    font-size: 0.9rem; /* 버튼 텍스트 크기 줄이기 */
-    padding: 0.4rem; /* 버튼 크기 줄이기 */
+    font-size: 0.9rem;
+    padding: 0.4rem; 
   }
 }
 
 @media screen and (max-width: 800px) {
   .project-item {
-    flex: 1 1 100%; /* 모바일에서는 한 줄에 1개씩 배치 */
+    flex: 1 1 100%; 
   }
   .project-title {
-    font-size: 1.2rem; /* 모바일에서 폰트 크기를 줄임 */
+    font-size: 1.2rem;
   }
   .title {
-    font-size: 2rem; /* 큰 타이틀의 폰트 크기를 줄임 */
+    font-size: 2rem; 
   }
   .experience-sub-title, .project-description, .section__text__p2 {
-    font-size: 1rem; /* 다양한 텍스트 요소의 폰트 크기를 줄임 */
+    font-size: 1rem; 
   }
   .nav-links {
     font-size: 1.2rem; /* 네비게이션 폰트 크기 줄이기 */
