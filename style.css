@@ -366,61 +366,25 @@ article .icon {
 }
 
 .project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusts the number of columns dynamically */
-  gap: 1.5rem; /* Space between grid items */
-  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
 .project-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  text-align: center;
-  padding: 1rem;
-  background: #fff;
-  border: 1px solid #ddd;
+  flex: 1 1 calc(33.33% - 20px);
+  max-width: 30%;
+  margin: 10px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-.project-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
 
-.project-title {
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin: 0.5rem 0;
-}
-
-.project-btn {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  color: #fff;
-  background-color: #007BFF;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.project-btn:hover {
-  background-color: #0056b3;
-}
-
-@media (max-width: 600px) {
-  .project-grid {
-    grid-template-columns: 1fr; /* Single column layout for very narrow screens */
-  }
-
-  .project-title {
-    font-size: 1rem; /* Adjust font size for small screens */
-  }
-}
 
 
 .project-grid-title {
@@ -551,6 +515,35 @@ ol li {
   .btn {
     font-size: 0.9rem; /* 버튼 텍스트 크기 줄이기 */
     padding: 0.4rem; /* 버튼 크기 줄이기 */
+  }
+}
+@media screen and (max-width: 800px) {
+  /* 프로젝트 아이템 한 줄에 하나 배치 */
+  .project-item {
+    flex: 1 1 100%; /* 한 줄에 하나씩 배치되도록 설정 */
+    max-width: 100%; /* 최대 너비를 100%로 설정 */
+  }
+
+  /* 프로젝트 타이틀 폰트 크기 축소 */
+  .project-title {
+    font-size: 1rem; /* 폰트를 모바일에 맞게 축소 */
+    text-align: center; /* 가운데 정렬 유지 */
+    line-height: 1.4; /* 가독성을 위한 줄 간격 */
+  }
+
+  /* 프로젝트 이미지 크기 조정 */
+  .project-img {
+    width: 80%; /* 이미지를 부모 컨테이너 너비의 80%로 축소 */
+    height: auto; /* 원본 비율 유지 */
+    margin: 0 auto; /* 가운데 정렬 */
+    display: block; /* margin: auto를 위해 block 요소로 설정 */
+  }
+
+  /* 버튼 크기 조정 */
+  .project-btn {
+    width: 90%; /* 버튼 너비를 부모 컨테이너 기준으로 축소 */
+    padding: 0.8rem; /* 버튼 높이 조정 */
+    font-size: 0.9rem; /* 버튼 텍스트 크기 축소 */
   }
 }
 
